@@ -1,4 +1,4 @@
-package cn.didadu.sample.thread;
+package cn.didadu.sample.thread.semaphore;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
