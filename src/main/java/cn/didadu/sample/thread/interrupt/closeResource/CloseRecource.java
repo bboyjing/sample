@@ -1,5 +1,7 @@
 package cn.didadu.sample.thread.interrupt.closeResource;
 
+import cn.didadu.sample.thread.interrupt.sleepAndIOAndSynchronized.IOBlocked;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
@@ -8,7 +10,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import thread.interrupt.sleepAndIOAndSynchronized.IOBlocked;
 
 public class CloseRecource {
 
