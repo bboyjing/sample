@@ -23,6 +23,8 @@ public class BufferFillDrain {
 
         CharBuffer buff = CharBuffer.allocate(100);
 
+        System.out.println(buff.isDirect());
+
         while(fillBuffer(buff)){
             buff.flip();
             drainBuffer(buff);
