@@ -1,4 +1,4 @@
-package cn.didadu.sample.classloader;
+package cn.didadu.sample.jvm.classloader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -62,7 +62,9 @@ public class CustomClassLoader extends ClassLoader {
     private String c2f(String name){  
         /**编译后的class文件存放的目录**/  
         //String baseDir = "/home/zj/workspace/Sample/bin/";
-        String baseDir = "E:\\IdeaProjects\\sample\\target\\classes\\";
+        //String baseDir = "E:\\IdeaProjects\\sample\\target\\classes\\";
+        String baseDir = "/Users/admin/IdeaProjects/sample/target/classes/";
+
         name = name.replace("." , File.separator);  
         name = baseDir + name + ".class";  
         return name;  
@@ -121,18 +123,18 @@ public class CustomClassLoader extends ClassLoader {
         }  
         return bytes;  
     }  
-    
-    /** 
+
+    /**
      * 热加载类 
      * @return 
-     */  
-    public Class<?> loadClass(){  
+     */
+    public Class<?> loadClass(){
         try {  
             return loadClass(name);  
         } catch (ClassNotFoundException e) {  
             e.printStackTrace();  
             return null;  
         }  
-    } 
-  
+    }
+
 }

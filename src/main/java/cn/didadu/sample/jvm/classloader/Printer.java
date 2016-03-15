@@ -1,4 +1,4 @@
-package cn.didadu.sample.classloader;
+package cn.didadu.sample.jvm.classloader;
 
 public class Printer implements IPrinter{
 
