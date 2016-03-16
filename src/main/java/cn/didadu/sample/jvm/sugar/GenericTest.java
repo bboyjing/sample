@@ -1,4 +1,4 @@
-package cn.didadu.sample.generic;
+package cn.didadu.sample.jvm.sugar;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -66,4 +66,19 @@ public class GenericTest {
     public static <T> T add(T x,T y){
         return y;
     }
+
+    /**
+     * 一下两个方法无法重载，应为泛型类型擦除
+     * @param list
+     * @return
+     */
+/*    public static String method(List<String> list){
+        System.out.println("invoke method(List<String> list)");
+        return "";
+    }
+
+    public static String method(List<Integer> list){
+        System.out.println("invoke method(List<Integer> list)");
+        return "";
+    }*/
 }
