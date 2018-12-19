@@ -10,6 +10,7 @@ public class Test3 extends Application {
    private static ScriptEngineManager manager = new ScriptEngineManager();
    private static ScriptEngine engine = manager.getEngineByName("nashorn");
 
+   @Override
    public void start(Stage stage) {
       Bindings scope = engine.createBindings();
       scope.put("stage", stage);

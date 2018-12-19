@@ -55,6 +55,16 @@ public class CovariantArrays {
         //flist.add(new Apple());
         //flist.add(new Fruit());
         //flist.add(new Object());
+
+        // writeTo方法的参数下限为Apple
+        // 限制了该方法写入的值的必须Apple或者Apple的子类
+        List<Fruit> testWrite = new ArrayList<>();
+        CovariantArrays.writeTo(testWrite);
+
+        // readFrom方法的参数上限为Apple
+        // 读取的时候申明超类引用是安全的
+        List<RedFujiApple> testRead = new ArrayList<>();
+        CovariantArrays.readFrom(testRead);
     }
 
     /**
@@ -78,7 +88,7 @@ public class CovariantArrays {
      * extends是限制数据来源的（生产者）
      * @param apples
      */
-    static void readFrom(List<? extends Apple> apples) {
+    static void readFrom(List<? extends Apple> apples)  {
         Apple apple = apples.get(0);
         // 编译不通过
         //RedFujiApple redFujiApple = apples.get(0);
