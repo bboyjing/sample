@@ -5,6 +5,7 @@ package cn.didadu.sample.lambda.javap;
  */
 public class JavaPNormal {
     public static void main(String[] args) {
+        // 是通过内部类实现的
         Thread t = new Thread(new Runnable() {
             @Override public void run() {
                 System.out.println("Hello World!");

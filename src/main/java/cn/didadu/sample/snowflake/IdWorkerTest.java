@@ -47,8 +47,8 @@ public class IdWorkerTest {
         final IdWorker idWorker1 = new IdWorker(0, 0);
         final IdWorker idWorker2 = new IdWorker(1, 0);
         for(int i = 0; i < 10; i++){
-            System.out.println(idWorker1.nextId());
-            System.out.println(idWorker2.nextId());
+            System.out.println("idWorker1:" + idWorker1.nextId());
+            System.out.println("idWorker2:" + idWorker2.nextId());
         }
 
     }

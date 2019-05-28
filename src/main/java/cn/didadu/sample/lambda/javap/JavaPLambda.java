@@ -5,6 +5,7 @@ package cn.didadu.sample.lambda.javap;
  */
 public class JavaPLambda {
     public static void main(String[] args) {
+        // lambda是通过私有的静态方法实现的
         Thread t = new Thread(() -> System.out.println("Hello World!"));
         t.start();
     }
